@@ -1,0 +1,42 @@
+.description-container {
+    h1,
+    h2 {
+        margin-bottom: 30px;
+        @media screen and (max-width: 670px) {
+            margin-bottom: 20px;
+        }
+    }
+    h3,
+    h4 {
+        @media screen and (max-width: 670px) {
+            margin-bottom: 10px;
+        }
+    }
+    .btn {
+        margin-top: 40px;
+        @media screen and (max-width: 670px) {
+            margin-top: 20px;
+        }
+    }
+}
+
+.col-2 {
+    .column:first-child {
+        .content-container {
+            padding-right: 50px;
+        }
+    }
+    .column:last-child {
+        .content-container {
+            padding-left: 50px;
+            max-width: 70%;
+            @media screen and (max-width: 860px) {
+                padding-left: 20px;
+                max-width: 100%;
+            }
+            @media screen and (max-width: 670px) {
+                padding: 0;
+            }
+        }
+    }
+}

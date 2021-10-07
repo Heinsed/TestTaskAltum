@@ -1,0 +1,105 @@
+.horizontal-bar {
+    padding-left: 100px;
+    @media screen and (max-width: 670px) {
+        padding-left: 0;
+    }
+    .flex-container {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+    .tabs-container {
+        border-bottom: 1px solid $color-black_02;
+        margin-bottom: 40px;
+        .tab {
+            width: 340px;
+            padding-bottom: 30px;
+            position: relative;
+            cursor: pointer;
+            transition: .4s;
+            h3 {
+                margin-bottom: 10px;
+                color: $color-black_04;
+            }
+            &.active {
+                h3 {
+                    color: $color-black_01;
+                }
+                &:after {
+                    content: '';
+                    height: 2px;
+                    display: block;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    background: $color-black_02;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+    .info-container {
+        .container {
+            display: none;
+            &.active {
+                display: block;
+            }
+            .schedule {
+                position: relative;
+                margin-bottom: 55px;
+                max-width: 500px;
+                @media screen and (max-width: 670px) {
+                    margin-bottom: 30px;
+                }
+                h5 {
+                    margin-bottom: 20px;
+                    @media screen and (max-width: 670px) {
+                        margin-bottom: 15px;
+                    }
+                    a {
+                        text-decoration-line: underline;
+                    }
+                }
+                h6 {
+                    margin-bottom: 20px;
+                    -webkit-line-clamp: 2;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    @media screen and (max-width: 670px) {
+                        margin-bottom: 15px;
+                    }
+                }
+                .time {
+                    position: absolute;
+                    transform-origin: right;
+                    transform: translateX(calc(-100% - 30px));
+                    @media screen and (max-width: 670px) {
+                        position: relative;
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.col-1 {
+    .horizontal-bar {
+        @media screen and (max-width: 1280px) {
+            margin-left: 50px;
+        }
+        @media screen and (max-width: 670px) {
+            margin-left: 10px;
+        }
+    }
+}
+
+.col-2 {
+    .column:last-child {
+        .horizontal-bar {
+            @media screen and (max-width: 860px) {
+                padding-left: 0;
+            }
+        }
+    }
+}

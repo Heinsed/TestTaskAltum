@@ -1,0 +1,77 @@
+.title-container {
+    margin-bottom: 30px;
+    &.no-center {
+        position: absolute;
+        top: 0;
+    }
+    h2 {
+        margin-bottom: 40px;
+        @media screen and (max-width: 860px) {
+            margin-bottom: 20px;
+        }
+    }
+    h5 {
+        margin-bottom: 50px;
+        @media screen and (max-width: 860px) {
+            margin-bottom: 30px;
+        }
+    }
+    .btn {
+        margin-top: 30px;
+        @media screen and (max-width: 860px) {
+            margin-top: 20px;
+        }
+    }
+}
+
+.col-1 {
+    .title-container {
+        margin-bottom: 40px;
+        position: relative;
+        &.no-center {
+            position: relative;
+            top: 0;
+        }
+    }
+}
+
+.col-2 {
+    .column:last-child {
+        .title-container {
+            padding-left: 50px;
+            width: 100%;
+            max-width: unset;
+            @media screen and (max-width: 860px) {
+                padding-left: 20px;
+            }
+            @media screen and (max-width: 670px) {
+                padding: 0;
+            }
+        }
+    }
+    .column {
+        .title-container {
+            max-width: 340px;
+            text-align: left;
+            display: block;
+            margin: unset;
+        }
+        .title-container:only-child {
+            padding-left: 200px;
+            @media screen and (max-width: 1440px) {
+                padding-left: 100px
+            }
+            @media screen and (max-width: 1280px) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            @media screen and (max-width: 670px) {
+                position: absolute;
+                top: 0;
+            }
+            @media screen and (max-width: 640px) {
+                position: relative;
+            }
+        }
+    }
+}
